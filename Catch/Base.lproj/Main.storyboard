@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,112 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Catch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BdX-ky-1cs">
+                                <rect key="frame" x="20" y="200" width="374" height="456"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="EmV-BZ-aBG">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="152"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btc" translatesAutoresizingMaskIntoConstraints="NO" id="Y7k-nY-Khl">
+                                                <rect key="frame" x="0.0" y="0.0" width="122" height="152"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btc" translatesAutoresizingMaskIntoConstraints="NO" id="10z-dW-uy5">
+                                                <rect key="frame" x="126" y="0.0" width="122" height="152"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btc" translatesAutoresizingMaskIntoConstraints="NO" id="JD8-jb-1lk">
+                                                <rect key="frame" x="252" y="0.0" width="122" height="152"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ayq-CR-f5K">
+                                        <rect key="frame" x="0.0" y="152" width="374" height="152"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btc" translatesAutoresizingMaskIntoConstraints="NO" id="Vdg-U5-msD">
+                                                <rect key="frame" x="0.0" y="0.0" width="122" height="152"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btc" translatesAutoresizingMaskIntoConstraints="NO" id="8ht-tR-GgZ">
+                                                <rect key="frame" x="126" y="0.0" width="122" height="152"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btc" translatesAutoresizingMaskIntoConstraints="NO" id="eAy-Ub-5th">
+                                                <rect key="frame" x="252" y="0.0" width="122" height="152"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="eGv-La-Xii">
+                                        <rect key="frame" x="0.0" y="304" width="374" height="152"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btc" translatesAutoresizingMaskIntoConstraints="NO" id="dRO-Nq-cQQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="122" height="152"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btc" translatesAutoresizingMaskIntoConstraints="NO" id="MmF-t8-KzK">
+                                                <rect key="frame" x="126" y="0.0" width="122" height="152"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btc" translatesAutoresizingMaskIntoConstraints="NO" id="4b0-OC-qj4">
+                                                <rect key="frame" x="252" y="0.0" width="122" height="152"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1a-aC-dMT">
+                                <rect key="frame" x="182.5" y="58" width="49" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrI-Us-kTH">
+                                <rect key="frame" x="36" y="694" width="350" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZp-oP-3Qe">
+                                <rect key="frame" x="170" y="136" width="74.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BdX-ky-1cs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7PJ-dF-Roe"/>
+                            <constraint firstAttribute="trailing" secondItem="BdX-ky-1cs" secondAttribute="trailing" constant="20" id="9Zb-nR-Dk6"/>
+                            <constraint firstItem="BdX-ky-1cs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="200" id="AeJ-Ph-3Z2"/>
+                            <constraint firstItem="P1a-aC-dMT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D4U-31-7Cf"/>
+                            <constraint firstAttribute="bottom" secondItem="BdX-ky-1cs" secondAttribute="bottom" constant="240" id="H9F-T4-d9E"/>
+                            <constraint firstItem="CZp-oP-3Qe" firstAttribute="top" secondItem="P1a-aC-dMT" secondAttribute="bottom" constant="30" id="Nmk-Vz-HT3"/>
+                            <constraint firstItem="CZp-oP-3Qe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZGI-9R-DVb"/>
+                            <constraint firstItem="P1a-aC-dMT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="i9R-tz-V2p"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btc1" destination="Y7k-nY-Khl" id="eTc-bP-Ett"/>
+                        <outlet property="btc2" destination="10z-dW-uy5" id="4HC-s8-fW6"/>
+                        <outlet property="btc3" destination="JD8-jb-1lk" id="Pk7-BD-iNy"/>
+                        <outlet property="btc4" destination="Vdg-U5-msD" id="eA4-WN-LfV"/>
+                        <outlet property="btc5" destination="8ht-tR-GgZ" id="O4l-ID-6cv"/>
+                        <outlet property="btc6" destination="eAy-Ub-5th" id="Q14-PA-E9E"/>
+                        <outlet property="btc7" destination="dRO-Nq-cQQ" id="wqh-wa-sso"/>
+                        <outlet property="btc8" destination="MmF-t8-KzK" id="vP5-rm-XZ9"/>
+                        <outlet property="btc9" destination="4b0-OC-qj4" id="O8b-4n-3Sy"/>
+                        <outlet property="highScoreLabel" destination="rrI-Us-kTH" id="8Q3-gn-gMP"/>
+                        <outlet property="scoreLabel" destination="CZp-oP-3Qe" id="zZx-xr-G5S"/>
+                        <outlet property="timeLabel" destination="P1a-aC-dMT" id="fVv-YA-QJE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btc" width="1500" height="1500"/>
+    </resources>
 </document>
