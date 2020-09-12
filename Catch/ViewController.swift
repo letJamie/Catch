@@ -29,10 +29,27 @@ class ViewController: UIViewController {
     var timer = Timer()
     var btcArray = [UIImageView]()
     var hideTimer = Timer()
+    var highScore = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let storedHighScore = UserDefaults.standard.object(forKey: "Highscore")
+        
+        if storedHighScore == nil {
+            
+            highScore = 0
+            highScoreLabel.text = "Highscore: \(highScore)"
+            
+        }
+        
+        if let newScore = storedHighScore as? Int {
+            
+            highScore = newScore
+            highScoreLabel.text = "Highscore: \(highScore)"
+
+        }
         
         scoreLabel.text = "Score: \(score)"
         
@@ -111,12 +128,29 @@ class ViewController: UIViewController {
             hideTimer.invalidate()
             timeLabel.text = "Time over"
             
+            if self.score > self.highScore {
+                
+                self.highScore = self.score
+                highScoreLabel.text = "Highscore: \(self.highScore)"
+                UserDefaults.standard.set(self.highScore, forKey: "Highscore")
+            }
+            
+            
+            
             let alert = UIAlertController(title: "Time Over", message: "Wanna play again?", preferredStyle: UIAlertController.Style.alert)
             
             let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
             
             let replayButton = UIAlertAction(title: "REPLAY", style: UIAlertAction.Style.default) { (UIAlertAction) in
-                //replay func
+                
+                self.score = 0
+                self.scoreLabel.text = "Score: \(self.score)"
+                self.timeLimit = 10
+                self.timeLabel.text = "Time: \(self.timeLimit)"
+                
+                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerFunc), userInfo: nil, repeats: true)
+                 
+                self.hideTimer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(self.hideImage), userInfo: nil, repeats: true)
             }
             
             alert.addAction(okButton)
