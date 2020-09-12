@@ -25,8 +25,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var btc9: UIImageView!
     
     var score = 0
-    var timeLimit = 5
+    var timeLimit = 10
     var timer = Timer()
+    var btcArray = [UIImageView]()
+    var hideTimer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +67,25 @@ class ViewController: UIViewController {
         btc8.addGestureRecognizer(recognizer8)
         btc9.addGestureRecognizer(recognizer9)
 
-         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFunc), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFunc), userInfo: nil, repeats: true)
+        
+        hideTimer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(hideImage), userInfo: nil, repeats: true)
 
+        
+        btcArray = [btc1, btc2, btc3, btc4, btc5, btc6, btc7, btc8, btc9]
+        
+        hideImage()
+    }
+    
+    @objc func hideImage() {
+           
+        for btc in self.btcArray {
+            btc.isHidden = true
+        }
+        
+        let randomNum = Int(arc4random_uniform(UInt32(self.btcArray.count - 1)))
+               
+            btcArray[randomNum].isHidden = false
     }
     
     @objc func increaseScore() {
@@ -84,7 +103,12 @@ class ViewController: UIViewController {
         
         if timeLimit == 0 {
             
+            for btc in self.btcArray {
+                btc.isHidden = true
+            }
+    
             timer.invalidate()
+            hideTimer.invalidate()
             timeLabel.text = "Time over"
             
             let alert = UIAlertController(title: "Time Over", message: "Wanna play again?", preferredStyle: UIAlertController.Style.alert)
@@ -98,9 +122,7 @@ class ViewController: UIViewController {
             alert.addAction(okButton)
             alert.addAction(replayButton)
             self.present(alert, animated: true, completion: nil)
-            
         }
-        
     }
 }
 
